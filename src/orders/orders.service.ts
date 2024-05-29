@@ -164,7 +164,6 @@ export class OrdersService {
             throw error;
         }
 
-        /*paso 1, consulta a la db para traer los datos que llegaron qeu aun no estan marcados como sincronizados en hubspot ,paso 2 tranforma dto order y pasa al process  request */
     }
 
 
@@ -224,7 +223,7 @@ export class OrdersService {
             phone: order.telefono,
             fecha_cargue_de_base: toUtcMidnight(order.fechaProd),
             fecha_de_entrega: toUtcMidnight(order.fechaEntrega),
-            fecha_de_entrega_programada: toUtcMidnight(order.fechaEntrega), // Se asume que es la misma fecha que la de entrega
+            fecha_de_entrega_programada: toUtcMidnight(order.fechaEntrega),
             estado_logistico: order.estadosLogistico,
             novedades: order.novedades,
             descripcion_de_novedades: order.descripcionNovedad,
@@ -265,7 +264,7 @@ export class OrdersService {
         orderEntity.imagenGuia = orderDto.imagenGuia;
         orderEntity.novedadesPorGuia = orderDto.novedadesPorGuia;
         orderEntity.fechaNovedades = orderDto.fechaNovedades;
-        orderEntity.updatedOrder = false; // Por defecto, marcamos como no actualizado
+        orderEntity.updatedOrder = false; 
         return orderEntity;
     }
 

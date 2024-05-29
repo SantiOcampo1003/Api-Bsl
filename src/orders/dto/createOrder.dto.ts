@@ -1,5 +1,4 @@
 export class CreateOrderDto{
-    id: number
     pedido: number 
     guia: string
     Cc: string
