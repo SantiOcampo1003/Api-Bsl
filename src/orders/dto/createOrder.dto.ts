@@ -22,7 +22,7 @@ export class CreateOrderDto{
     cuenta: string
     centroDeCostos: string
     fechaImagen: Date
-    imagenGuia: Buffer
+    imagenGuia: string
     novedadesPorGuia: number 
     fechaNovedades: Date
 }

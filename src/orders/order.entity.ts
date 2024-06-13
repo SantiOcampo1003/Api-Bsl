@@ -74,8 +74,8 @@ export class Order{
     @Column({ type: "datetime" }) 
     fechaImagen: Date;
   
-    @Column({ type: "mediumblob" }) 
-    imagenGuia: Buffer;
+    @Column() 
+    imagenGuia: string;
   
     @Column()
     novedadesPorGuia: number;
